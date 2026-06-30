@@ -1,0 +1,205 @@
+/* --- configuracion global --- */
+body {
+    background-color: #c2cdff;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- boton volver --- */
+.boton-volver {
+    background-color: #005a60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.boton-volver:hover {
+    background-color: #007a82;
+}
+
+/* --- fuente personalizada bluewater --- */
+@font-face {
+    font-family: 'BlueWater';
+    src: url('../american_years/Blue Water.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- titulo principal con la fuente personalizada --- */
+.titulo-principal {
+    font-family: 'BlueWater', sans-serif;
+    color: #6775f7;
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0 30px 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #ffffff, -1px -1px 0px #c2cdff, 1px -1px 0px #c2cdff, -1px 1px 0px #c2cdff;
+}
+
+/* --- contenedor con imagen de fondo --- */
+.contenedor-recuadro-fondo {
+    background-image: url('../imagenes/fondop.png');
+    background-size: 100% 100%;
+    width: 700px;
+    margin: -90px auto 50px auto;
+    padding: 140px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- contenedor del formulario --- */
+.contenedor-principal {
+    position: relative;
+    width: 350px;
+    margin: 50px auto 20px auto;
+}
+
+.logo-fondo { width: 100%; display: block; }
+
+/* --- formulario superpuesto sobre el logo --- */
+.formulario-encima {
+    position: absolute;
+    top: 24%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- contenedor inferior (no usado actualmente) --- */
+.contenedor-fondo-inferior {
+    width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.imagen-fondo-inferior { width: 100%; display: block; border-radius: 15px; }
+
+/* --- titulo de la banda superior del formulario --- */
+.banda-superior { font-size: 20px; color: #005a60; margin-bottom: 10px; }
+
+/* --- estilos para inputs --- */
+.input-campo {
+    width: 70%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid #57dfe5;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-campo:focus {
+    border-color: #005a60;
+    background-color: #e0fafa;
+    box-shadow: 0 0 5px rgba(87, 223, 229, 0.5);
+}
+
+label {
+    display: block;
+    color: #005a60;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+/* --- botones principales --- */
+.boton-enviar, .boton-historial {
+    background-color: #57dfe5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar { padding: 19px 0; width: 93%; margin-top: 1px; }
+
+.boton-historial {
+    padding: 15px 0; width: 40%; margin: -10px 0 0 140px;
+    position: relative; top: -35px;
+}
+
+.boton-enviar:hover, .boton-historial:hover { background-color: #45babb; }
+.boton-enviar:active, .boton-historial:active { background-color: #005a60; transform: scale(0.98); }
+
+/* --- botones de accion (usados en varias paginas) --- */
+.boton-accion {
+    padding: 10px 20px;
+    background-color: #5d6eff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    text-decoration: none;
+}
+.boton-accion:hover { background-color: #7b8bff; }
+
+/* --- tabla del historial --- */
+.tabla-historial {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-historial th { background-color: #6775f7; color: white; padding: 15px; text-transform: uppercase; font-size: 14px; }
+.tabla-historial td { padding: 12px; border-bottom: 1px solid #ffffff; text-align: center; color: #333; }
+.tabla-historial tr:last-child td { border-bottom: none; }
+.tabla-historial tr:hover { background-color: #ffffff; }
+
+/* --- barra de herramientas (busqueda y botones) --- */
+.barra-herramientas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.bloque-izquierdo, .bloque-derecho { display: flex; gap: 5px; }
+.bloque-derecho { align-items: center; }
+
+/* --- input dentro del contenedor de tabla --- */
+.contenedor-tabla .input-campo {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #5d6eff;
+}
+
+/* --- boton para ir al historial desde inicio --- */
+.boton-historial-inicio {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #57dfe5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: -80px;
+    margin-bottom: 20px;
+}
+
+.boton-historial-inicio:hover {
+    background-color: #45babb;
+}
